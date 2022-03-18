@@ -28,3 +28,69 @@ body{
     color: #333;
     text-shadow: none;
 }
+
+.header-main{
+    animation: moveInLeft 2s ease-out;
+}
+
+.lead {
+    animation: moveInRight 2s ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {
+        transform: translateX(-15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.btn:link,
+.btn:visited {
+    border-radius: 100px;
+    transition: all 0.2s;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255,255,255,0.2);
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(255,255,255,0.2);
+}
+
+.btn-animated{
+    animation: moveInBottom 0.5s ease-out 0.7s;
+    animation-fill-mode: backwards;
+}
