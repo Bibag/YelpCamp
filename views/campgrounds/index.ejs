@@ -26,8 +26,8 @@
                                     <%= campground.location %>
                                 </small>
                             </p>
-                            <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">View <%=
-                                    campground.title %> </a>
+                            <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary mb-3 rounded-pill">View
+                                <%= campground.title %> </a>
                         </dv>
                     </dv>
                 </dv>
@@ -36,6 +36,6 @@
             <% } %>
                 <script>
                     const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
-                    const campgrounds= {features: <%-JSON.stringify(campgrounds)%>};
+                    const campgrounds = { features: <%-JSON.stringify(campgrounds) %>};
                 </script>
                 <script src="/javascripts/clusterMap.js"></script>

@@ -94,7 +94,7 @@
                 </form>
                 <% } %>
                     <% for(let review of campground.reviews){ %>
-                        <div class="card mb-3">
+                        <div class="card mb-3 p-3">
                             <h5 class="card-title">
                                 <%= review.author.username %>
                             </h5>
@@ -110,7 +110,7 @@
                                 <form
                                     action="/campgrounds/<%= campground._id %>/reviews/<%= review._id %>?_method=DELETE"
                                     method="post">
-                                    <button class="btn btn-sm btn-danger">Delete</button>
+                                    <button class="btn btn-sm btn-danger rounded-pill">Delete</button>
                                 </form>
                                 <% } %>
                         </div>
